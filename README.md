@@ -29,7 +29,7 @@ To run the web application:
 1. Ensure you have activated the virtual environment.
 2. Run the following command:
    ```
-   streanlit run app.py
+   streamlit run app.py
    ```
 3. Open a web browser and navigate to `http://localhost:<port-in-logs>` to access the interface.
 
