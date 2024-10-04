@@ -1,0 +1,11 @@
+,sentence,term,polarity,from,to,ln
+2009,we came here on a crowded saturday night and were seated right away despite being 15 minutes late for our reservation.,"['reservation', 'seated']","['neutral', 'positive']","['106', '50']","['117', '56']","[11, 6]"
+2010,we decided to eat in tea room which was small and cute.,['tea room'],['positive'],['21'],['29'],[8]
+2011,"we did notice however, that some tables had what looked like pita instead of naan.","['pita', 'naan']","['negative', 'negative']","['61', '77']","['65', '81']","[4, 4]"
+2012,we split a tasty vegetable samosa and the malai tikka wrap.,"['vegetable samosa', 'malai tikka wrap']","['positive', 'positive']","['17', '42']","['33', '58']","[16, 16]"
+2013,we were seated at the sushi bar in front of yasuda.,['sushi bar'],['neutral'],['22'],['31'],[9]
+2014,"we were tired and cold when we got to the restaurant, then we sat down to begin ordering appetizers.",['appetizers'],['neutral'],['89'],['99'],[10]
+2015,"word of advice, save room for pasta dishes and never leave until you've had the tiramisu.","['pasta dishes', 'tiramisu']","['positive', 'positive']","['30', '80']","['42', '88']","[12, 8]"
+2016,would have rather tried terrace in the sky or water club for that price,['price'],['negative'],['66'],['71'],[5]
+2017,you can actually get 2 salads worth if u take it home and add it to some lettuce!,"['salads', 'lettuce']","['negative', 'neutral']","['23', '73']","['29', '80']","[6, 7]"
+2018,yourself a favor and have dinner here and see if you dont agree with me.,['dinner'],['neutral'],['26'],['32'],[6]

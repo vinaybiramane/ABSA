@@ -1,48 +1,53 @@
-# ABSA
-Context Based Aspect Sentiment
+# Aspect-based Sentiment Analysis using LLM
 
-## ABSA: Context-Based Aspect Sentiment Analysis
+This project focuses on using a fine-tuned Large Language Model (LLM) for Aspect-based Sentiment Analysis (ABSA) using contextual information.
 
-This project focuses on fine-tuning a model for Aspect-Based Sentiment Analysis (ABSA) using contextual information.
+## Project Overview
+
+Aspect-based Sentiment Analysis is a natural language processing task that aims to identify aspects of given targets and the sentiment expressed towards them. This project utilizes advanced LLM techniques to improve ABSA performance.
 
 ### Project Structure
 
-The project contains the following key files and directories related to fine-tuning (stored locally):
+The project contains the following key files and directories:
 
 - `peft-detect-aspects-checkpoint-local/`: Directory containing locally saved checkpoints for the fine-tuned model using PEFT (Parameter-Efficient Fine-Tuning) techniques.
+- `absa_env/`: Virtual environment directory for the project.
+- `app.py`: Flask web application for demonstrating the ABSA model.
+- `aspect.py`: Core functionality for aspect detection and sentiment analysis.
 
-### Environment
-
-- `absa_env/`: Virtual environment directory for the project. It's recommended to use this environment to ensure consistency in package versions.
-
-### Fine-tuning Process
-
-The fine-tuning process likely involves the following steps:
-
-1. Data preparation: Preprocessing and formatting the ABSA dataset.
-2. Model selection: Choosing a pre-trained language model as the base.
-3. PEFT implementation: Applying Parameter-Efficient Fine-Tuning techniques to efficiently adapt the model for ABSA tasks.
-4. Training: Fine-tuning the model on the prepared dataset.
-5. Evaluation: Assessing the model's performance on aspect detection and sentiment classification.
-6. Checkpointing: Saving the fine-tuned model states in the `peft-detect-aspects-checkpoint-local/` directory.
 
 ### Usage
 
-To use this project:
+The project includes a web-based interface for interacting with the ABSA model:
 
-1. Set up the virtual environment:
+- Built with Streamlit, providing a user-friendly interface for inputting text and viewing analysis results.
+- Allows users to input text and select a specific domain (e.g., restaurant, laptop).
+- Displays detected aspects and their associated sentiments.
+
+To run the web application:
+
+1. Ensure you have activated the virtual environment.
+2. Run the following command:
    ```
-   python -m venv absa_env
-   source absa_env/bin/activate  # On Windows, use `absa_env\Scripts\activate`
+   streanlit run app.py
    ```
+3. Open a web browser and navigate to `http://localhost:<port-in-logs>` to access the interface.
 
-2. Install the required dependencies (requirements.txt file should be created if not present).
+### Aspect Detection and Sentiment Analysis (aspect.py)
 
-3. Run the fine-tuning jupyter scripts to generate your own fine-tuned model.
+The `aspect.py` file contains the core functionality for aspect-based sentiment analysis:
 
-4. Use the fine-tuned model for ABSA tasks, loading checkpoints from the `peft-detect-aspects-checkpoint-local/` directory.
+- Implements the `AspectModel` class, which encapsulates the fine-tuned LLM.
+- Provides methods for:
+  - Loading the fine-tuned model and tokenizer.
+  - Preprocessing input text.
+  - Detecting aspects within the input text.
+  - Analyzing sentiment for each detected aspect.
+- Utilizes the PEFT library for efficient fine-tuning and inference.
 
-### Note
+Key functions:
 
-This README is based on limited information from the project structure. For more detailed instructions on running the fine-tuning process or using the fine-tuned model, please refer to specific script files or additional documentation in the project.
+- `detect_aspects(text, domain)`: Identifies aspects in the given text for a specific domain.
+- `detect_sentiment(text, aspects)`: Determines the sentiment (positive, negative, neutral) for each detected aspect.
+
 

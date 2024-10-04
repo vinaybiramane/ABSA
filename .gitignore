@@ -1,2 +1,5 @@
 absa_env/
 peft-detect-aspects-checkpoint-local/
+peft-absa-checkpoint-local/
+.env
+__pycache__/
